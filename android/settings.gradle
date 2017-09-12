@@ -1,0 +1,3 @@
+rootProject.name = 'MovieTickets_ReactNative'
+
+include ':app'
