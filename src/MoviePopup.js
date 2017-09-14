@@ -11,6 +11,7 @@ import {
   TouchableWithoutFeedback,
   View
 } from 'react-native';
+import Options from './Options';
 import { defaultStyles } from './styles';
 
 // Get screen dimensions
@@ -261,17 +262,23 @@ export default class MoviePopup extends Component {
             <View>
               {/* Day */}
               <Text style={styles.sectionHeader}>Day</Text>
-              {/* TODO: Add day options here */}
-              <Text>Add day options here</Text>
+              <Options
+                values = {days}
+                chosen = {chosenDay}
+                onChoose = {onChooseDay}
+              />
               {/* Time */}
               <Text style={styles.sectionHeader}>Showtime</Text>
-              {/* TODO: Add show time options here */}
-              <Text>Add show time options here</Text>
+              <Options
+                values = {times}
+                chosen = {chosenTime}
+                onChoose = {onChooseTime}
+              />
             </View>
 
           </View>
 
-          {/* Footer */}
+          {/* Book ticket */}
           <View style={styles.footer}>
             <TouchableHighlight
               underlayColor="#9575CD"
