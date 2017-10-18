@@ -1,4 +1,4 @@
-package com.movietickets_reactnative;
+package com.movietickets;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "MovieTickets_ReactNative";
+        return "MovieTickets";
     }
 }

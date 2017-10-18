@@ -9,20 +9,20 @@ import { defaultStyles } from './styles';
 
 export default class Confirmation extends Component {
 
-  static navigationOptions = {
-    title: 'Confirmation',
-  };
+  static propTypes = {
+    code: PropTypes.string.isRequired,
+  }
 
   render() {
     const { code } = this.props;
     return (
       <View style={styles.container}>
         <Text style={styles.header}>Your confirmation code</Text>
-        <Text style={styles.code}>{this.props.navigation.state.params.code}</Text>
+        <Text style={styles.code}>{code}</Text>
         <TouchableOpacity
           style={styles.buttonContainer}
           // Go back when pressed
-          onPress={() => this.props.navigation.goBack() }
+          onPress={() => this.props.navigator.pop() }
         >
           <Text style={styles.button}>Done</Text>
         </TouchableOpacity>
